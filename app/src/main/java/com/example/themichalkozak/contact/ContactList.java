@@ -3,17 +3,11 @@ package com.example.themichalkozak.contact;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import java.util.ArrayList;
-
-public class MainActivity extends AppCompatActivity {
+public class ContactList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_contact_list);
     }
-
-    ArrayList<Contact> contactArrayList = new ArrayList<Contact>();
-
-
 }
