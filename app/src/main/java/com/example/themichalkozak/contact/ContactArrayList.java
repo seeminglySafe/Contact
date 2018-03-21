@@ -11,7 +11,7 @@ public class ContactArrayList {
     private String myName;
     private ArrayList<Contact> contactArrayList;
 
-    public ContactArrayList(String myName, ArrayList<Contact> contactArrayList) {
+    public ContactArrayList(String myName) {
         this.myName = myName;
         this.contactArrayList = new ArrayList<Contact>();
     }
@@ -22,6 +22,10 @@ public class ContactArrayList {
         }
         this.contactArrayList.add(contact);
         return true;
+    }
+
+    public ArrayList<Contact> getContactArrayList() {
+        return contactArrayList;
     }
 
     private int findContact(Contact contact){
