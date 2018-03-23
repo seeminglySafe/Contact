@@ -1,5 +1,6 @@
 package com.example.themichalkozak.contact;
 
+
 import java.util.ArrayList;
 
 /**
@@ -8,27 +9,20 @@ import java.util.ArrayList;
 
 public class ContactArrayList {
 
-    private String myName;
+    private String name;
     private ArrayList<Contact> contactArrayList;
 
-    public ContactArrayList(String myName) {
-        this.myName = myName;
+    public ContactArrayList(String name) {
+        this.name = name;
         this.contactArrayList = new ArrayList<Contact>();
     }
 
-    public boolean addContact(Contact contact){
-        if(findContact(contact)<0){
-            return false;
-        }
-        this.contactArrayList.add(contact);
-        return true;
-    }
 
     public ArrayList<Contact> getContactArrayList() {
         return contactArrayList;
     }
 
-    private int findContact(Contact contact){
-        return this.contactArrayList.indexOf(contact);
+    public void addContact(Contact contact) {
+        this.contactArrayList.add(contact);
     }
 }

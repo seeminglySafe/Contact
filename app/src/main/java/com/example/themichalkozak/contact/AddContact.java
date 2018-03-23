@@ -22,10 +22,21 @@ public class AddContact extends AppCompatActivity {
         myName =  findViewById(R.id.name_editText);
         myNumber = findViewById(R.id.number_EditText);
 
+
+
+
         findViewById(R.id.confirm_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Log.i("AddActivity", "Ok button clicked");
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                bundle.putString("CONTACT_NAME",myName.getText().toString());
+                bundle.putString("CONTACT_NUMBER",myNumber.getText().toString());
+                intent.putExtras(bundle);
+                setResult(RESULT_OK, intent);
+
 
                 finish();
             }
@@ -33,13 +44,4 @@ public class AddContact extends AppCompatActivity {
 
     }
 
-    @Override
-    public void finish() {
-        Intent intent = new Intent();
-
-        intent.putExtra("eldo", "CONTACT_NAME");
-
-        setResult(RESULT_OK, intent);
-        super.finish();
-    }
 }
